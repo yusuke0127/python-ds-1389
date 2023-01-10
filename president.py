@@ -1,15 +1,9 @@
 age = int(input("How old are you?"))
 
-if age >= 21:
-    print("You can become president")
-elif age >= 18:
-    print("You can vote")
+if age == 18:
+    print("You can giri giri vote!")
+elif age < 18:
+    print("You cannot vote")
 else:
-    print("Be patient!")
-
-# sentence = ""
-
-# if sentence:
-#     print("This statement is true")
-# else: 
-#     print("This statement is false")
+    print("You can vote!")
+print("The end")
