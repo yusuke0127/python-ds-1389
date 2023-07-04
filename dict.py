@@ -1,5 +1,5 @@
 student = {
-  'name': 'Marvin',
+  'name': 'Chris',
   'age': 29,
   'nationality': "Germany"
 }
@@ -8,28 +8,29 @@ print(student)
 
 # Useful fonction on dict
 print(len(student))
-print('Marvin' in student) # "in" doesn't search for values!
-print('name' in student) # only keys
-print('hi' in student)
-print(list(student.values()))
+print('Chris' in student)
+print('age' in student)
+print('job' in student)
 print(list(student.keys()))
+print(list(student.values()))
 print(list(student.items()))
 
 #CRUD
 
 # Create
-student['job'] = "Data Scientist"
+student['job'] = 'data scientist'
 print(student)
 
 # Read (even if the key doesn't exist!)
 print(student['age'])
-# print(student['family_name']) # KeyError: 'family_name'
+# print(student['hobby']) # KeyError: 'hobby'
 print(student.get('age'))
-print(student.get('family_name'))
-print(student.get('family_name','not found'))
+print(student.get('hobby'))
+print(student.get('age', 'unknown'))
+print(student.get('hobby', 'unknown'))
 
 # Update
-student['name'] = 'Super Marvin'
+student['job'] = 'super data scientist'
 print(student)
 
 # Delete
@@ -37,8 +38,5 @@ del student['job']
 print(student)
 
 # Iterate
-# for key, value in student.items():
-#   print(f"{key} - {value}")
-  
-# [ print(f"{key} - {value}") for key, value in student.items() ]
-[ print(f"{key} - {value}") for key, value in student.items() if key.startswith("n")]
+for key, value in student.items():
+    print(f"{key} - {value}")
