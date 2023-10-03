@@ -1,15 +1,25 @@
-# build even_or_odd
-# define even_or_odd function, with 1 param
-# def even_or_odd(num):
-#     if num % 2 == 0:
-#         return "even"
-#     return "odd"
+# Positional argument
+def is_even(number):
+    return number % 2 == 0
 
-def even_or_odd(num=0):
-    return "even" if num % 2 == 0 else "odd"
+result = is_even(42)
+print(result)
 
-# call even_or_odd function, passing an argument
-print(even_or_odd(12))
-print(even_or_odd(42))
-print(even_or_odd(13))
-print(even_or_odd())
+# Keyword argument
+def is_odd(number=0):
+    return number % 2 == 1
+
+result = is_odd(number=1)
+print(result)
+
+
+# Mix of positional and keyword argument
+def full_name(first_name, last_name, capitalize=False):
+    if capitalize:
+        return f"{first_name.capitalize()} {last_name.capitalize()}"
+    else:
+        return f"{first_name} {last_name}"
+    
+
+print(full_name("john", "lennon"))
+print(full_name("ringo", "starr", capitalize=True))

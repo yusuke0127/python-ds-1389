@@ -1,8 +1,9 @@
-# define an age variable, and assign (store) the user input to it
+# Define an age variable, and assign (store) the user input to it
 age = int(input("How old are you? "))
 
 # Concatenation
 print("You are " + str(age) + " years-old")
+
 # Interpolation
 print(f"You are {age} years-old")
 
